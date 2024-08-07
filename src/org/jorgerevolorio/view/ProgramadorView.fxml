@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.PerspectiveCamera?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #D9CEAC;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.jorgerevolorio.controller.ProgramadorController">
+   <children>
+      <Circle fill="#517a77" layoutX="46.5" layoutY="337.5" radius="357.0" rotate="16.8" stroke="BLACK" AnchorPane.bottomAnchor="-293.0" AnchorPane.leftAnchor="-311.0" AnchorPane.rightAnchor="198.0" AnchorPane.topAnchor="-20.0">
+         <rotationAxis>
+            <Point3D />
+         </rotationAxis>
+      </Circle>
+      <Circle fill="#be2b3f" layoutX="599.0" layoutY="416.0" radius="122.0" stroke="BLACK" />
+      <Circle fill="#cb433e" layoutX="75.0" layoutY="309.0" radius="231.0" stroke="BLACK" />
+      <Pane layoutX="241.0" layoutY="134.0" prefHeight="38.0" prefWidth="343.0" style="-fx-background-color: #BE2B3F;">
+         <children>
+            <TextField alignment="CENTER" editable="false" layoutX="11.0" layoutY="6.0" prefHeight="26.0" prefWidth="320.0" style="-fx-background-color: #C7C0BF;" text="Jorge Abraham Revolorio Mazariegos">
+               <font>
+                  <Font name="Bodoni MT" size="14.0" />
+               </font>
+            </TextField>
+            <PerspectiveCamera fieldOfView="111.5" layoutX="11.0" layoutY="19.0" nearClip="100.0" />
+         </children>
+      </Pane>
+      <Pane layoutX="242.0" layoutY="196.0" prefHeight="38.0" prefWidth="343.0" style="-fx-background-color: #BE2B3F;">
+         <children>
+            <TextField alignment="CENTER" editable="false" layoutX="12.0" layoutY="6.0" prefHeight="26.0" prefWidth="320.0" style="-fx-background-color: #C7C0BF;" text="2019058">
+               <font>
+                  <Font name="Bodoni MT" size="14.0" />
+               </font>
+            </TextField>
+            <PerspectiveCamera fieldOfView="145.3" layoutX="11.0" layoutY="19.0" nearClip="100.0" />
+         </children>
+      </Pane>
+      <Pane layoutX="239.0" layoutY="256.0" prefHeight="38.0" prefWidth="343.0" style="-fx-background-color: #BE2B3F;">
+         <children>
+            <TextField alignment="CENTER" editable="false" layoutX="12.0" layoutY="6.0" prefHeight="26.0" prefWidth="320.0" style="-fx-background-color: #C7C0BF;" text="IN5BM">
+               <font>
+                  <Font name="Bodoni MT" size="14.0" />
+               </font>
+            </TextField>
+            <PerspectiveCamera fieldOfView="111.5" layoutX="11.0" layoutY="19.0" nearClip="100.0" />
+         </children>
+      </Pane>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#9c9695" height="245.0" layoutX="473.0" layoutY="-160.0" rotate="51.7" stroke="BLACK" strokeType="INSIDE" width="212.0" />
+      <ImageView fitHeight="102.0" fitWidth="82.0" layoutX="517.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Logo2.png" />
+         </image>
+      </ImageView>
+      <Text fontSmoothingType="LCD" layoutX="75.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PROGRAMADOR" textAlignment="CENTER" wrappingWidth="428.53662109375">
+         <font>
+            <Font name="Arial Black" size="41.0" />
+         </font>
+         <fill>
+            <LinearGradient endX="0.49904580152671757" endY="0.5305343222527104" startX="0.4923664113037459" startY="0.3511450672877654">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="#5a928d" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Text>
+      <Pane layoutX="42.0" layoutY="130.0" prefHeight="162.0" prefWidth="157.0" rotate="-48.2" style="-fx-background-color: #9C9695;">
+         <children>
+            <ImageView fitHeight="108.0" fitWidth="158.0" layoutX="2.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true" rotate="-42.0">
+               <image>
+                  <Image url="@../image/FotoProgramador.JPG" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <ImageView fitHeight="48.0" fitWidth="42.0" layoutX="14.0" layoutY="344.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Regresar.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

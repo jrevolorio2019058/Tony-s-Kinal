@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReportePlato" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="96220d32-a156-4f49-a9ef-2c2e06171f35">
+	<property name="ireport.zoom" value="1.6105100000000008"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="codPlato" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="codTipoPlato" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[Select * from Platos p Inner Join TipoPlato tp on p.codigoTipoPlato = 	tp.codigoTipoPlato where p.codigoTipoPlato = $P{codTipoPlato}]]>
+	</queryString>
+	<field name="codigoPlato" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cantidad" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombrePlato" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="descripcionPlato" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="precioPlato" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoTipoPlato" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="descripcionTipo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="689" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="572" height="689" forecolor="#D9CEAC" backcolor="#D9CEAC" uuid="849714c3-3ab2-4bd5-bd85-6a80d6842792"/>
+			</rectangle>
+		</band>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="572" height="79" forecolor="#9E3440" backcolor="#9E3440" uuid="b40e29a3-7cfd-4261-9217-4949930653ab"/>
+			</rectangle>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="572" height="79" forecolor="#C7C0BF" backcolor="#9E3440" uuid="f284c4e9-19f9-4784-9653-e2b4ed1cd3bf"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Freestyle Script" size="50" isBold="false" isItalic="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Tony's Kinal]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="219" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="572" height="219" forecolor="#9E3440" backcolor="#BE2B3F" uuid="d60c1080-5b39-4cf1-ba2e-aac2ee9b1b5d"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="10" y="10" width="142" height="34" forecolor="#C7C0BF" uuid="9b5b3a90-b5ac-4170-8ff6-fd927b35b346"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial Black" size="16"/>
+				</textElement>
+				<text><![CDATA[ Nombre Plato]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="431" y="10" width="129" height="34" forecolor="#C7C0BF" uuid="6fac7a63-fa46-44a5-9920-062b771a328a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial Black" size="16"/>
+				</textElement>
+				<text><![CDATA[Cantidad]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="163" y="10" width="255" height="34" forecolor="#C7C0BF" uuid="aa5e814b-bce7-444a-9041-206c592c6ed8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial Black" size="16"/>
+				</textElement>
+				<text><![CDATA[Descripción]]></text>
+			</staticText>
+			<textField>
+				<reportElement mode="Opaque" x="10" y="57" width="142" height="36" backcolor="#D9CEAC" uuid="969edf40-5ab8-4fcb-87a3-4b35cebbb5cf"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombrePlato}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="163" y="57" width="255" height="36" backcolor="#D9CEAC" uuid="f13d8fc4-c891-4163-b15b-b45017ab90c8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{descripcionPlato}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="431" y="57" width="129" height="36" backcolor="#D9CEAC" uuid="c2004410-7b7e-4fb5-8617-6edeecc5aa13"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cantidad}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="163" y="105" width="255" height="34" forecolor="#C7C0BF" uuid="56d5489b-fe96-4f16-b9e1-1d75f37c6345"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial Black" size="16"/>
+				</textElement>
+				<text><![CDATA[Precio]]></text>
+			</staticText>
+			<textField>
+				<reportElement mode="Opaque" x="163" y="156" width="255" height="41" backcolor="#D9CEAC" uuid="8be95cea-9598-4dac-8dec-323a6affeb31"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{precioPlato}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="572" height="61" forecolor="#BE2B3F" backcolor="#C7C0BF" uuid="63f62d53-8815-4cff-b305-03bad120629f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial Black" size="12"/>
+				</textElement>
+				<text><![CDATA[Descripción Tipo Plato]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="48" splitType="Stretch">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="0" width="572" height="48" backcolor="#BE2B3F" uuid="1b3c068a-4559-477b-8c3c-b3fcab7179c6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{descripcionTipo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="72" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="572" height="72" forecolor="#C7C0BF" backcolor="#9E3440" uuid="bd730ac8-24fc-46c3-8530-7a46ff0dfb19"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Freestyle Script" size="35" isBold="false" isItalic="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Trabajo Bien Hecho]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="431" y="49" width="141" height="23" uuid="0466db33-ab3a-43c6-9535-e9f18718ba85"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Service-Food-Restaurant]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

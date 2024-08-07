@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #CB433E;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.jorgerevolorio.controller.EmpresaController">
+   <children>
+      <AnchorPane layoutX="191.0" layoutY="9.0" prefHeight="570.0" prefWidth="590.0" style="-fx-background-color: #D9CEAC; -fx-background-radius: 15 15 15 15;">
+         <children>
+            <GridPane layoutX="47.0" layoutY="6.0" prefHeight="58.0" prefWidth="506.0">
+              <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="140.0" minWidth="10.0" prefWidth="140.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="110.0" minWidth="10.0" prefWidth="104.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="173.0" minWidth="10.0" prefWidth="122.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.0" minWidth="10.0" prefWidth="140.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Código Empresa" textFill="#517a77">
+                     <font>
+                        <Font name="Broadway" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label text="Nombre Empresa" textFill="#517a77" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Broadway" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="14.0" prefWidth="64.0" text="Dirección" textFill="#517a77" GridPane.columnIndex="2">
+                     <font>
+                        <Font name="Broadway" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label text="Telefono" textFill="#517a77" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Broadway" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtCodigoEmpresa" editable="false" prefHeight="22.0" prefWidth="98.0" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="Berlin Sans FB" size="12.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtNombreEmpresa" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Berlin Sans FB" size="12.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtDireccionEmpresa" editable="false" prefHeight="21.0" prefWidth="145.0" GridPane.columnIndex="3">
+                     <font>
+                        <Font name="Berlin Sans FB" size="12.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtTelefonoEmpresa" editable="false" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Berlin Sans FB" size="12.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </GridPane>
+            <TableView fx:id="tblEmpresas" layoutX="16.0" layoutY="73.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="470.0" prefWidth="558.0">
+              <columns>
+                <TableColumn fx:id="colCodigoEmpresa" prefWidth="86.0" text="Cod.Empresa" />
+                <TableColumn fx:id="colNombreEmpresa" prefWidth="132.0" text="NombreEmpresa" />
+                  <TableColumn fx:id="colDireccionEmpresa" prefWidth="175.0" text="Dirección" />
+                  <TableColumn fx:id="colTelefonoEmpresa" prefWidth="164.0" text="Telefono" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="600.0" prefWidth="180.0" style="-fx-background-color: #9E3440;">
+         <children>
+            <VBox layoutX="19.0" layoutY="139.0" prefHeight="365.0" prefWidth="142.0" spacing="50.0">
+               <children>
+                  <Button fx:id="btnNuevo" alignment="BOTTOM_LEFT" mnemonicParsing="false" onAction="#nuevo" prefHeight="47.0" prefWidth="125.0" styleClass="button1" stylesheets="@../resource/TonysKinal.css" text="Nuevo">
+                     <font>
+                        <Font name="Arial Black" size="12.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgNuevo" fitHeight="39.0" fitWidth="96.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/Ingresar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnEliminar" alignment="BOTTOM_LEFT" mnemonicParsing="false" onAction="#eliminar" prefHeight="47.0" prefWidth="123.0" styleClass="button2" stylesheets="@../resource/TonysKinal.css" text="Eliminar">
+                     <font>
+                        <Font name="Arial Black" size="12.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgEliminar" fitHeight="39.0" fitWidth="96.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/Eliminar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnEditar" alignment="BOTTOM_LEFT" mnemonicParsing="false" onAction="#editar" prefHeight="47.0" prefWidth="124.0" styleClass="button3" stylesheets="@../resource/TonysKinal.css" text="Editar">
+                     <font>
+                        <Font name="Arial Black" size="12.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgEditar" fitHeight="39.0" fitWidth="96.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/Editar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnReporte" alignment="BOTTOM_LEFT" mnemonicParsing="false" onAction="#generarReporte" prefHeight="47.0" prefWidth="124.0" styleClass="button4" stylesheets="@../resource/TonysKinal.css" text="Reporte">
+                     <font>
+                        <Font name="Arial Black" size="12.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgReporte" fitHeight="39.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/Listar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
+            <Pane layoutX="-6.0" layoutY="14.0" prefHeight="78.0" prefWidth="183.0" style="-fx-background-color: #BE2B3F; -fx-background-radius: 0 100 100 0;">
+               <children>
+                  <Label layoutX="8.0" layoutY="3.0" prefHeight="71.0" prefWidth="168.0" text="Empresas" textFill="#507875">
+                     <font>
+                        <Font name="Arial Black" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="52.0" fitWidth="61.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/Empresa.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Label>
+               </children>
+            </Pane>
+            <ImageView fitHeight="58.0" fitWidth="55.0" layoutX="8.0" layoutY="537.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/Regresar.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="55.0" fitWidth="55.0" layoutX="122.0" layoutY="537.0" onMouseClicked="#ventanaServicio" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/Servicio.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="55.0" fitWidth="55.0" layoutX="67.0" layoutY="537.0" onMouseClicked="#ventanaPresupuesto" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/Presupuesto.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

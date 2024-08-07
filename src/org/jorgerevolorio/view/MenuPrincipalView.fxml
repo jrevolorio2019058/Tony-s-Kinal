@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="688.0" style="-fx-background-color: #D9CEAC;" stylesheets="@../resource/TonysKinal.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.jorgerevolorio.controller.MenuPrincipalController">
+   <children>
+      <Pane layoutX="-19.0" layoutY="-69.0" prefHeight="704.0" prefWidth="750.0" rotate="32.5" style="-fx-background-color: #C7C0BF;">
+         <children>
+            <ImageView fitHeight="566.0" fitWidth="641.0" layoutX="114.0" layoutY="112.0" pickOnBounds="true" preserveRatio="true" rotate="-32.0">
+               <image>
+                  <Image url="@../image/Logo1.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <MenuBar layoutX="1.0" layoutY="1.0" prefHeight="54.0" prefWidth="446.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Módulos">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#ventanaEmpresas" text="Empresas" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaProductos" text="Productos" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaEmpleados" text="Empleados" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaPlato" text="Platos" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaPresupuesto" text="Presupuesto" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaServicio" text="Servicios" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaTipoEmpleado" text="TipoEmpleado" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaTipoPlato" text="TipoPlato" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Vista">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaProductos_has_Platos" text="Productos_has_Platos" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaServicios_has_Platos" text="Servicios_has_Platos" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaServicios_has_Empleados" text="Servicios_has_Empleados" />
+               </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="Reportes">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#ventanaReporteGeneral" text="ReporteGeneral" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaReporteEmpresa" text="ReporteEmpresa" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaReporteTipoEmpleado" text="ReporteTipoEmpleado" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaReporteTipoPlato" text="ReporteTipoPlato" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaProducto" text="ReporteProducto" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaReportePresupuesto" text="ReportePresupuesto" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaReportePresupuesto" text="ReporteServicio" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaReportePlato" text="ReportePlato" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaReporteEmpleado" text="ReporteEmpleado" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="?">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#ventanaProgramador" text="Programador" />
+            </items>
+          </Menu>
+        </menus>
+         <padding>
+            <Insets left="20.0" right="20.0" />
+         </padding>
+      </MenuBar>
+      <ImageView fitHeight="54.0" fitWidth="101.0" layoutX="6.0" layoutY="539.0" onMouseClicked="#login" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Salir.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="61.0" fitWidth="65.0" layoutX="627.0" layoutY="539.0" onMouseClicked="#informacion" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Informacion.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

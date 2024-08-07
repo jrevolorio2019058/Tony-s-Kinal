@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteEmpresas" language="groovy" pageWidth="792" pageHeight="612" orientation="Landscape" columnWidth="752" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="71531880-ce2f-4699-b8f0-9bde8c9891e4">
+	<property name="ireport.zoom" value="1.1000000000000003"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[call sp_ListarProductos();]]>
+	</queryString>
+	<field name="codigoProducto" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreProducto" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cantidad" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="572" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="752" height="572" forecolor="#D9CEAC" backcolor="#D9CEAC" uuid="43c090c0-44bd-4a73-888c-87e54486fc13"/>
+			</rectangle>
+		</band>
+	</background>
+	<title>
+		<band height="85" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="752" height="85" forecolor="#9E3440" backcolor="#9E3440" uuid="f096855c-7dfd-40fc-9578-525748c14ffa"/>
+			</rectangle>
+			<staticText>
+				<reportElement mode="Opaque" x="62" y="10" width="640" height="65" forecolor="#C7C0BF" backcolor="#9E3440" uuid="a2d96554-03f6-4584-b708-cc4ad8e4ee12"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Freestyle Script" size="50" isBold="false" isItalic="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Tony's Kinal]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="48">
+			<rectangle>
+				<reportElement x="0" y="0" width="752" height="48" forecolor="#9E3440" backcolor="#BE2B3F" uuid="4ee0485d-e8f6-4288-8d7a-7f9c8fa6ed7d"/>
+			</rectangle>
+			<staticText>
+				<reportElement mode="Opaque" x="295" y="0" width="185" height="48" forecolor="#C7C0BF" backcolor="#BE2B3F" uuid="aefa3fde-aa39-4343-a472-4a9bf65f6246"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Franklin Gothic Medium" size="20" isBold="false" isItalic="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Productos]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="51">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="220" height="51" forecolor="#517A77" backcolor="#C7C0BF" uuid="dd6fdfa0-3fae-4cbd-a2cb-914b50c169d1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial Black" size="16" isBold="false" isItalic="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Codigo Empresa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="220" y="0" width="260" height="51" forecolor="#517A77" backcolor="#C7C0BF" uuid="243ccd4c-d0fc-436d-a426-f3724203b57f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial Black" size="16"/>
+				</textElement>
+				<text><![CDATA[Nombre Empresa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="480" y="0" width="272" height="51" forecolor="#517A77" backcolor="#C7C0BF" uuid="b2e9bc2c-059a-47f8-af58-9e7589c8d6db"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial Black" size="16"/>
+				</textElement>
+				<text><![CDATA[Cantidad]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30">
+			<rectangle>
+				<reportElement x="0" y="0" width="220" height="29" forecolor="#9E3440" backcolor="#CB433E" uuid="90df565d-daf3-4eba-81b8-ca1fff532105"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="220" y="0" width="260" height="29" forecolor="#9E3440" backcolor="#CB433E" uuid="49cd79e9-dd42-457f-af30-f95bc2a94ddf"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="480" y="0" width="272" height="29" forecolor="#9E3440" backcolor="#CB433E" uuid="f71901ef-b5d9-4aa2-bf20-02eb286b3008"/>
+			</rectangle>
+			<textField>
+				<reportElement x="21" y="5" width="176" height="20" forecolor="#C7C0BF" uuid="321816fe-0842-4c8c-b1aa-c4da3b63473b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial Black" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{codigoProducto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="235" y="5" width="227" height="20" forecolor="#C7C0BF" uuid="5480480b-01be-47af-a60a-66f56d35433a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial Black" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombreProducto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="503" y="5" width="234" height="20" forecolor="#C7C0BF" uuid="acd1ec9e-0428-4f96-ba5f-b57a44fcee63"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial Black" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cantidad}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="752" height="54" forecolor="#9E3440" backcolor="#9E3440" uuid="fa1d117e-1de9-4265-a913-0f69c723d7f7"/>
+			</rectangle>
+			<staticText>
+				<reportElement mode="Opaque" x="62" y="0" width="640" height="51" forecolor="#C7C0BF" backcolor="#9E3440" uuid="58fd75a0-b108-47f3-9652-3db71bcae2c5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Freestyle Script" size="35" isBold="false" isItalic="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Trabajo Bien Hecho]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="608" y="28" width="141" height="23" uuid="6a1da975-b367-4598-bbe1-14e43cbb19e5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Service-Food-Restaurant]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>
